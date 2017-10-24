@@ -3,6 +3,9 @@
 
 ## Problem
 Ethereum smart contract source code and transactions require storage, recomputation and validation by every node on the network including those who will never use the contract. This makes a smart contract blockchain impossible to scale since it must be restricted by the resources of the slowest node in the network. Ideally, each node should only process and store smart contracts that it would interact with or attempt to read. This scenario would allow far higher smart contract scalability as well as smart contract privacy.
+
+## Proposal
+
 I propose cheap smart contracts that do not require recomputation, storage or validation to be replicated on every node in the network. It is only validated on the machines of those who use the smart contract. This can work on any blockchain that supports extra data in transactions. For the sake of simplicity, the proof of concept implementation will be based on Ethereum. In the future, it could also allow scalable Solidity smart contracts on top of the Bitcoin protocol.
 I'm still working on the PoC and I will release it on this repository when finished.
 
