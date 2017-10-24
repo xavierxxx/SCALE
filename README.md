@@ -7,9 +7,9 @@ I'm still working on the PoC and I will release it on this repository when finis
 How it should work:
 
 * Smart contract bytecode and ABI are shipped with frontend dApp code in addition to gas limit (as high as you want, 1000s of times higher than the Ethereum block limit) and maximum transaction length (for transactions downloaded from Swarm/IPFS).
-* It watches the Ethereum blockchain for events including the hash of the shipped solidity bytecode as a topic.
+* Web3.js watches the Ethereum blockchain for events including the hash of the shipped solidity bytecode as a topic.
 * Found transactions on Ethereum can either contain the entire content or optimally refer to a Swarm/IPFS hash in order to retrieve large transaction content.
-* EVM runs and validates transactions found then finalizes a new smart contract state.
+* Ethereumjs-vm runs and validates transactions found then finalizes a new smart contract state.
 * Users of the smart contract never communicate. New users get the smart contract code with the dApp code then reconstruct its latest state by retrieving all events relevant to the smart contract from Ethereum.
 
 Possible use cases:
