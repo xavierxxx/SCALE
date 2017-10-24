@@ -14,6 +14,7 @@ How it should work:
 
 Possible use cases:
 * Smart contracts with very high gas limit and without gas fees.
+* Private smart contracts
 * Solidity smart contracts on top of the Bitcoin protocol or any other blockchain.
 * ERC20 tokens fees paid with itself rather than Ether. This would work by forming a blockchain layer on top of SCALE.
 
