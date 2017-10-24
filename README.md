@@ -6,7 +6,7 @@ Ethereum smart contract source code and transactions require storage, recomputat
 
 ## Proposal
 
-I propose cheap smart contracts that do not require recomputation, storage or validation to be replicated on every node in the network. It is only validated on the machines of those who use the smart contract. This can work on any blockchain that supports extra data in transactions. For the sake of simplicity, the proof of concept implementation will be based on Ethereum. In the future, it could also allow scalable Solidity smart contracts on top of the Bitcoin protocol.
+I propose cheap smart contracts that do not require recomputation, storage or validation to be replicated on every node in the network. It is only validated on the machines of those who use the smart contract. Since only dApp users will recompute the smart contract, this allows for far higher gas limits. This can work on any blockchain that supports extra data in transactions. For the sake of simplicity, the proof of concept implementation will be based on Ethereum. In the future, it could also allow scalable Solidity smart contracts on top of the Bitcoin protocol. 
 I'm still working on the PoC and I will release it on this repository when finished.
 
 ## How it should work
@@ -14,6 +14,7 @@ I'm still working on the PoC and I will release it on this repository when finis
 * Smart contract bytecode and ABI are shipped with frontend dApp code in addition to gas limit (as high as you want, 1000s of times higher than the Ethereum block limit) and maximum transaction length (for transactions downloaded from Swarm/IPFS).
 * Web3.js watches the Ethereum blockchain for events including the hash of the shipped solidity bytecode as a topic.
 * Found transactions on Ethereum can either contain the entire content or optimally refer to a Swarm/IPFS hash in order to retrieve large transaction content.
+* To provide privacy, transaction data can be encrypted whether on the Ethereum chain or on Swarm. A private key would be shipped with the dApp code in order to allow only those with access to it to decrypt the smart contract transactions.
 * Ethereumjs-vm runs and validates transactions found then finalizes a new smart contract state.
 * Users of the smart contract never communicate. New users get the smart contract code with the dApp code then reconstruct its latest state by retrieving all events relevant to the smart contract from Ethereum.
 
