@@ -20,7 +20,7 @@ Possible use cases:
 
 Challenges:
 
- * The main challenge is to make this interoperable with the rest of the Ethereum ecosystem including the use of Ether and other smart contracts hosted on the chain.
+ * The main challenge is to make this interoperable with the rest of the Ethereum ecosystem including the use of Ether and other smart contracts hosted on the chain. This is possible but requires further work.
 
 Contribution
 * Please contact me on my email address nour@lamarkaz.com for questions, suggestions or ideas.
